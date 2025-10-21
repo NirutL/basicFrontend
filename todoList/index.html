@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Todo List</h1>
+        
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="todoInput" 
+                placeholder="เพิ่มงานใหม่..."
+                class="input-box"
+            >
+            <button id="addBtn" class="add-button">เพิ่ม</button>
+        </div>
+
+        <ul id="todoList" class="todo-list">
+            <!-- Todo items จะปรากฏที่นี่ -->
+        </ul>
+    </div>
+
+    <!-- Modal สำหรับแก้ไข -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>แก้ไขงาน</h2>
+            <input type="text" id="editInput" class="edit-input">
+            <div class="modal-buttons">
+                <button id="saveEditBtn" class="save-btn">บันทึก</button>
+                <button id="cancelEditBtn" class="cancel-btn">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

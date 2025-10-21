@@ -1,0 +1,15 @@
+.grid-container{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+
+}
+
+.item{
+    padding: 3rem;
+    border: 1px solid white;
+    background: orange;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}

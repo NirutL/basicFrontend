@@ -1,0 +1,49 @@
+header{
+    background: black;
+    color:aliceblue;
+    text-align: center;
+    padding: 2px;
+    height: 10vh;
+}
+h1{
+    display: none;   
+}
+
+/* normal */
+@media only screen and (min-width:801px){
+    header{
+        background-color:brown
+        
+    }
+    .normal{
+        display: block;
+    }
+}
+       
+/* Smart Phone */
+@media only screen and (max-width:500px){
+    header{
+        background-color:brown
+    }
+    .phone{
+        display: block;
+    }
+}
+/* Tablet */
+@media only screen and (min-width:501px) and (max-width:800px){
+    header{
+        background-color: darkcyan;
+    }
+    .tablets{
+        display: block;
+    }
+}
+/* lanscape */
+@media only screen and (max-height:500px) {
+    header{
+        background-color:chartreuse
+    }
+    .lanscape{
+        display: block;
+    }
+}

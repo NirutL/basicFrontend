@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic : FrontEnd</title>    
+
+    <style>
+        table, th, td {
+            border: 1px solid rgb(74, 134, 204);
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+
+        p.message {
+            font-size: 20px;
+            color: blue;
+            background-color: blanchedalmond;
+            width: 200px;           
+        }
+    </style>
+
+
+</head>
+
+<body>    
+
+    <h1>CSS เบื้องต้น</h1>    
+    <table width="600px">
+        <thead >Thead</thead>
+        <th width="20%">
+            Company
+        </th>
+        <th width="80%">
+            Website
+        </th>
+       <tr>
+            <td>
+                Diva
+            </td>
+            <td>
+                <a href="https://diva-supply.com/">https://diva-supply.com/</a>
+            </td>
+       </tr>
+       <tr>
+            <td>
+                Lashury
+            </td>
+            <td>
+                <a href="https://lashurybeauty.com/">https://lashurybeauty.com/</a>
+            </td>
+       </tr>
+       <tr>
+            <td>
+                Lashury
+            </td>
+            <td>
+                <a href="https://lashurybeauty.com/">https://lashurybeauty.com/</a>
+            </td>
+       </tr>
+    </table>
+    
+    <hr>
+    
+    <a href="/menu/menu.html">Back to Menu</a>
+
+    <h2>Use JavaScript to Change Text</h2>
+    <p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+
+    <p id="demoX"></p>
+    <p id="demo"></p>
+
+    <script>
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script> 
+
+    <script>
+    document.getElementById("demoX").innerHTML = "Hello JavaScript XXX!";
+    </script> 
+
+
+    <p class="message">fsdfds</p>
+
+</body>
+
+
+
+
+</html>

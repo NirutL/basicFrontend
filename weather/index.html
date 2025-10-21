@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Weather App</h1>
+        
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="ค้นหาเมือง (เช่น Bangkok, New York)..."
+                class="search-input"
+            >
+            <button id="searchBtn" class="search-button">ค้นหา</button>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            ⏳ กำลังโหลด...
+        </div>
+
+        <div id="error" class="error" style="display: none;">
+        </div>
+
+        <div id="weatherInfo" class="weather-info" style="display: none;">
+            <div class="weather-card">
+                <h2 id="cityName"></h2>
+                <div class="temperature-section">
+                    <div id="temperature" class="temperature"></div>
+                    <div id="weatherDescription" class="description"></div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail">
+                        <span class="label">💧 ความชื้น</span>
+                        <span id="humidity" class="value"></span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">💨 ความเร็วลม</span>
+                        <span id="windSpeed" class="value"></span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">🌡️ ความกดอากาศ</span>
+                        <span id="pressure" class="value"></span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">👁️ มองเห็นได้ไกล</span>
+                        <span id="visibility" class="value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
