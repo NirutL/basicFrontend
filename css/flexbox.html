@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Demo</title>
+  <!-- เก่งเรื่องการจัดเรียงของใน 1 มิติ (คือ ไม่เป็น "แถวแนวนอน" ก็ "คอลัมน์แนวตั้ง" อย่างใดอย่างหนึ่ง) -->
+  <!-- สรุป Flexbox
+    คุณได้เรียนรู้ 4 คุณสมบัติที่สำคัญที่สุดของ Flexbox แล้วครับ:
+
+    display: flex; (เปิดโหมด)
+
+    justify-content: (คุมแกนหลัก)
+
+    align-items: (คุมแกนรอง)
+
+    flex-direction: (สลับแกน)
+
+    แค่นี้ก็เพียงพอสำหรับ 80% ของงานจัด Layout ภายในคอมโพเนนต์ (เช่น Navbar, Card) แล้วครับ -->
+
+
+  <style>
+    /* นี่คือ CSS ของเรา */
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      height: 200px;
+
+      background-color: #f3f4f6; /* สีเทาอ่อน (Tailwind gray-100) */
+      border: 2px solid #d1d5db; /* สีเทาเข้ม (Tailwind gray-300) */
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .box {
+      background-color: #3b82f6; /* สีฟ้า (Tailwind blue-500) */
+      color: white;
+      padding: 1rem;
+      border: 1px solid #1d4ed8;
+      margin: 0.5rem; /* ใส่ margin ให้สวยงาม */
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Problem: Default Layout (Block)</h3>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+</body>
+</html>
