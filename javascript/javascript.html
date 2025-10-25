@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Counter</title>
+   <!-- DOM (Document Object Model): นี่คือวิธีที่ JS "มองเห็น" หน้าเว็บ HTML ของคุณครับ มันมองเห็นเป็น "ผังต้นไม้" (Tree) ของ Element ต่างๆ (เช่น <body> มีลูกคือ <h1> และ <div>)
+    DOM Events: คือ "สัญญาณ" ที่เกิดขึ้นบนหน้าเว็บ เช่น click (การคลิก), submit (การส่งฟอร์ม), keydown (การพิมพ์คีย์บอร์ด)
+    Event Listeners: คือวิธีที่เราใช้ JS "ดักฟัง" 👂 สัญญาณเหล่านั้น เมื่อ JS ได้ยินสัญญาณ (เช่น "เฮ้! มีคนคลิกปุ่ม!"), มันก็จะทำงานตามที่เราสั่งครับ
+    ES6+ (JavaScript สมัยใหม่): คือการอัปเกรดภาษา JS ให้เขียนง่ายขึ้น อ่านคล่องขึ้น ที่เราจะใช้บ่อยๆ คือ:
+    let / const: ใช้แทน var ( const คือตัวแปรที่ "ห้ามเปลี่ยนค่า", let คือตัวแปรที่ "เปลี่ยนค่าได้") -->
+  <style>
+    body { 
+      font-family: sans-serif; 
+      display: grid;
+      place-items: center; /* ท่า grid/flex จัดกลาง */
+      min-height: 80vh;
+    }
+    #counter-display { 
+      font-size: 5rem; /* <h2> ตัวใหญ่ๆ */
+      margin: 1rem;
+    }
+    button {
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Simple Counter</h1>
+  
+  <h2 id="counter-display">0</h2>
+  
+  <div>
+    <button id="decrease-btn">-</button>
+    <button id="increase-btn">+</button>
+  </div>
+
+  <script>
+    // 1. เลือก Elements ที่จำเป็น
+    const  counterDisplay = document.getElementById("counter-display");
+    const  decreaseBtn = document.getElementById("decrease-btn");
+    const  increaseBtn = document.getElementById("increase-btn");
+
+    // 2. สร้างตัวแปรนับเลข
+    let count = 0;
+
+    // 3. เพิ่ม Event Listeners ให้ปุ่ม
+    // โค้ดของคุณ (Classic Function) - ทำงานได้ดีมาก
+    // decreaseBtn.addEventListener('click',function() {
+    //                                                 count = count - 1;
+    //                                                 counterDisplay.textContent = count;
+    //                                                 });
+
+    // increaseBtn.addEventListener('click',function() {
+    //                                                 count = count + 1;
+    //                                                 counterDisplay.textContent = count;
+    //                                                 });
+
+    // โค้ดแบบ Arrow Function (ES6+) - ทำงานเหมือนกัน
+    increaseBtn.addEventListener('click', () => {
+        count++; // (นี่คือ 'count = count + 1' แบบย่อครับ)
+        counterDisplay.textContent = count;
+    });
+
+    decreaseBtn.addEventListener('click', () => {
+        count--; // (นี่คือ 'count = count - 1' แบบย่อครับ)
+        counterDisplay.textContent = count;
+    });
+  </script>
+
+</body>
+</html>

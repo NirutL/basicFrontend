@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
-    
-    <!-- ทีนี้ Flexbox เก่งเรื่อง 1 มิติ (แถว หรือ คอลัมน์) ถ้าเราอยากจัด Layout 2 มิติ (เช่น Sidebar ซ้าย + Content ขวา + Footer ล่าง) CSS Grid จะเก่งกว่ามากครับ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Demo</title>
+  <!-- ทีนี้ Flexbox เก่งเรื่อง 1 มิติ (แถว หรือ คอลัมน์) ถ้าเราอยากจัด Layout 2 มิติ (เช่น Sidebar ซ้าย + Content ขวา + Footer ล่าง) CSS Grid จะเก่งกว่ามากครับ -->
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      /* ทำให้ layout สูงเต็มจอ */
+      height: 100vh; 
+    }
 
+    /* สไตล์เริ่มต้น ให้มีสีสันจะได้เห็นชัดๆ */
+    header { 
+      background-color: #60a5fa; 
+      padding: 1rem; 
+      grid-area: header; /* <-- รวมไว้ที่นี่ */
+    }
+    nav { 
+      background-color: #93c5fd; 
+      padding: 1rem; 
+      grid-area: sidebar; /* <-- รวมไว้ที่นี่ */
+    }
+    main { 
+      background-color: #f3f4f6; 
+      padding: 1rem; 
+      grid-area: main; /* <-- รวมไว้ที่นี่ */
+    }
+    footer { 
+      background-color: #60a5fa; 
+      padding: 1rem; 
+      grid-area: footer; /* <-- รวมไว้ที่นี่ */
+    }
+
+    /* --- ส่วนของ Grid จะเติมตรงนี้ --- */
+    .grid-container {
+      /* 1. เราจะเปิดโหมด Grid ที่นี่ */
+        display: grid;
+      /* 2. เราจะกำหนดคอลัมน์และแถวที่นี่ */
+        grid-template-columns: auto 1fr;
+      /* 3. เราจะ "วาด" layout ที่นี่ */
+        grid-template-rows: auto 1fr auto;
+      /* ทำให้ container สูงเต็มจอ */
+        height: 100vh; 
+
+        grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";      
+    }
+       
+  </style>
 </head>
 <body>
-    
+
+  <div class="grid-container" >
+    <header>Header</header>
+    <nav>Sidebar</nav>
+    <main>Main Content</main>
+    <footer>Footer</footer> 
+  </div>
+   
 </body>
 </html>
